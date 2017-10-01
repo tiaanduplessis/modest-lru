@@ -1,0 +1,40 @@
+{
+  "name": "modest-lru",
+  "version": "1.0.0",
+  "description": "Simple LRU cache that gets the job done",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/tiaanduplessis/modest-lru",
+    "type": "git"
+  },
+  "homepage": "https://github.com/tiaanduplessis/modest-lru",
+  "bugs": "https://github.com/tiaanduplessis/modest-lru",
+  "main": "dist/modest-lru.js",
+  "browser": "dist/modest-lru.js",
+  "module": "dist/modest-lru.es.js",  
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "jest",
+    "format": "prettier-standard 'src/**/*.js'",
+    "build": "bili --format es --format umd --compress",
+    "start": "npm run test",
+    "precommit": "npm test",
+    "prepublish": "npm run build",
+    "pretest": "npm run format"
+  },
+  "author": "tiaanduplessis <tiaanduplessis@hotmail.com>",
+  "babel": {
+    "presets": [
+      ["env"]
+    ]
+  },
+  "devDependencies": {
+    "jest": "^21.0.2",
+    "husky": "^0.14.3", 
+    "babel-preset-env": "^1.6.0",
+    "bili": "^0.18.1",
+    "prettier-standard": "^6.0.0"
+  }
+}
