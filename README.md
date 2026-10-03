@@ -56,6 +56,8 @@
 
 ## About
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tiaanduplessis/modest-lru.svg)](https://greenkeeper.io/)
+
 Simple little LRU cache that works in node & browser. Based on the [hashlru](https://github.com/dominictarr/hashlru) algorithm. Uses [Maps](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) under the hood.
 
 ## Install
