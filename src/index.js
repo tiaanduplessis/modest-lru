@@ -43,7 +43,9 @@ class ModestLRU {
   }
 
   remove (key) {
-    return this.prevCache.delete(key) || this.cache.delete(key)
+    const removedPrevious = this.prevCache.delete(key)
+    const removedCurrent = this.cache.delete(key)
+    return removedPrevious || removedCurrent
   }
 
   clear () {

@@ -50,7 +50,9 @@ ModestLRU.prototype.has = function has (key) {
 };
 
 ModestLRU.prototype.remove = function remove (key) {
-  return this.prevCache.delete(key) || this.cache.delete(key)
+  var removedPrevious = this.prevCache.delete(key);
+  var removedCurrent = this.cache.delete(key);
+  return removedPrevious || removedCurrent
 };
 
 ModestLRU.prototype.clear = function clear () {
